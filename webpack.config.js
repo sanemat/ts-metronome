@@ -4,9 +4,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const isDevelopment = process.env.NODE_ENV !== "production";
 
 const config = {
-  entry: {
-    main: resolve("./src/index.ts")
-  },
+  entry: "./src/index.ts",
   module: {
     rules: [
       {
@@ -38,7 +36,11 @@ const config = {
       template: "./src/index.html",
       filename: "./index.html"
     })
-  ]
+  ],
+  output: {
+    filename: "bundle.js",
+    path: resolve(__dirname, "dist")
+  }
 };
 
 module.exports = config;
