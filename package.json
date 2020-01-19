@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
+    "clear": "del dist",
     "test": "exit 0",
-    "start": "npm run build && http-server ./dist -o",
+    "start": "npm run clear && npm run build && http-server ./dist -o",
     "prettier": "prettier --write src/*.ts"
   },
   "author": "Matt (Sanemat) <o.gata.ken@gmail.com>",
@@ -15,6 +16,7 @@
     "@types/jest": "^24.9.0",
     "@types/node": "^13.1.8",
     "awesome-typescript-loader": "^5.2.1",
+    "del-cli": "^3.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.12.1",
