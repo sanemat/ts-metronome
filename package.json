@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config ./webpack.config.js",
     "test": "exit 0"
   },
   "author": "Matt (Sanemat) <o.gata.ken@gmail.com>",
