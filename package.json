@@ -8,7 +8,7 @@
     "clear": "del dist",
     "test": "exit 0",
     "start": "npm run clear && npm run build && http-server ./dist -o",
-    "prettier": "prettier --write src/*.ts"
+    "prettier": "prettier --write src/*.ts *.js"
   },
   "author": "Matt (Sanemat) <o.gata.ken@gmail.com>",
   "license": "Apache-2.0",
