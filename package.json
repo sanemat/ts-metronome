@@ -7,5 +7,10 @@
     "test": "exit 0"
   },
   "author": "Matt (Sanemat) <o.gata.ken@gmail.com>",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.3.0"
+  }
 }
