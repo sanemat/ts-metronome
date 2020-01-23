@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-        Hello from TypeScript and Webpack
+      Metronome
     </title>
-</head>
+  </head>
 
-<body>
-<div id="root"></div>
-</body>
+  <body>
+    <div id="root">
+      <div class="header">
+        <span class="header--control"><button>Play</button></span>
+        <span class="header--tempo">Tempo: 120 BPM</span>
+        <span class="header--resolution">Resolution: 16th notes</span>
+      </div>
+      <div class="container">
+        <canvas width="200" height="100"></canvas>
+      </div>
+    </div>
+  </body>
 </html>
