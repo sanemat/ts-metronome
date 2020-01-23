@@ -1,1 +1,1 @@
-window.alert("index!!!");
+import "./index.css";
