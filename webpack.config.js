@@ -25,6 +25,10 @@ const config = {
             options: { minimize: !isDevelopment }
           }
         ]
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
