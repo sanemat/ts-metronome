@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config ./webpack.config.js",
-    "clear": "del dist",
+    "build": "webpack --color --mode production --config webpack.config.production.js",
+    "prebuild": "del dist",
     "test": "exit 0",
-    "start": "npm run clear && npm run build && http-server ./dist -o",
+    "start": "webpack-dev-server --progress --color --mode development --config webpack.config.development.js",
     "prettier": "prettier --write src/*.{ts,html,css} *.js"
   },
   "author": "Matt (Sanemat) <o.gata.ken@gmail.com>",
@@ -18,6 +18,9 @@
     "awesome-typescript-loader": "^5.2.1",
     "css-loader": "^3.4.2",
     "del-cli": "^3.0.0",
+    "eslint": "^6.8.0",
+    "fork-ts-checker-notifier-webpack-plugin": "^1.0.3",
+    "fork-ts-checker-webpack-plugin": "^4.0.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.12.1",
@@ -26,8 +29,10 @@
     "source-map-loader": "^0.2.4",
     "style-loader": "^1.1.3",
     "ts-jest": "^24.3.0",
+    "ts-loader": "^6.2.1",
     "typescript": "^3.7.5",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   }
 }
