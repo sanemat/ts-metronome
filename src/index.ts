@@ -12,9 +12,17 @@ function togglePlayer() {
   if (playing) {
     console.log("Stop!");
     playing = false;
+    const button = document.querySelector(".header--control");
+    if (button) {
+      button.innerHTML = "Play";
+    }
   } else {
     console.log("Run!");
     playing = true;
+    const button = document.querySelector(".header--control");
+    if (button) {
+      button.innerHTML = "Stop";
+    }
   }
 }
 
