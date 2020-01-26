@@ -1,5 +1,6 @@
 import "./index.css";
 
+// @ts-ignore
 let audioContext = null;
 
 function init() {
