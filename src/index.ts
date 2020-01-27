@@ -9,21 +9,27 @@ function init() {
 }
 
 function tick(beatNumber: number) {
+  if (!playing) {
+    return;
+  }
   // create an oscillator
-  const osc = audioContext.createOscillator();
-  osc.connect(audioContext.destination);
+  const oscillator = audioContext.createOscillator();
+  oscillator.connect(audioContext.destination);
   if (beatNumber % 16 === 0) {
     // beat 0 == high pitch
-    osc.frequency.setValueAtTime(880, audioContext.currentTime);
+    oscillator.frequency.setValueAtTime(880, audioContext.currentTime);
   } else if (beatNumber % 4 === 0) {
     // quarter notes = medium pitch
-    osc.frequency.setValueAtTime(440, audioContext.currentTime);
+    oscillator.frequency.setValueAtTime(440, audioContext.currentTime);
     // other 16th notes = low pitch
   } else {
-    osc.frequency.setValueAtTime(220, audioContext.currentTime);
+    oscillator.frequency.setValueAtTime(220, audioContext.currentTime);
   }
-  osc.start(audioContext.currentTime);
-  osc.stop(audioContext.currentTime + 50);
+  oscillator.start(audioContext.currentTime);
+  oscillator.stop(audioContext.currentTime + 0.05);
+
+  // 120BPM
+  setTimeout(tick, 500, [beatNumber]);
 }
 function togglePlayer() {
   if (playing) {
