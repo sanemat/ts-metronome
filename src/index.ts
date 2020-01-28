@@ -4,7 +4,7 @@ let audioContext: AudioContext = null;
 let playing = false;
 let schedulerId: number = null;
 let nextNoteTime: number = 0;
-let scheduleAheadTime: number = 0.1; // 100ms ahead
+let scheduleAheadTime: number = 0.2; // 200ms ahead
 let tempo = 240;
 
 function init() {
