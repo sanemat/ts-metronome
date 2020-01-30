@@ -8,6 +8,7 @@ let scheduleAheadTime: number = 0.2; // 200ms ahead
 let tempo = 240;
 
 function init() {
+  const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
   audioContext = new AudioContext();
 }
 
